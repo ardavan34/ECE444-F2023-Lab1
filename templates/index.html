@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Flasky{% endblock %}     <!--set the web title to 'Flasky'-->
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">     <!--set the bar to black-->
+    <div class="container">     <!--set width with container-->
+        <div class="navbar-header">     <!--set the header of our navigation bar-->
+            <button type="button" class="navbar-toggle"     
+             data-toggle="collapse" data-target=".navbar-collapse">     <!--create button for toggling between bar options-->
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Flasky</a>     <!--create the first option, the project name, and the link it goes to-->
+        </div>
+        <div class="navbar-collapse collapse">     <!--list of buttons/items in the navigation bar-->
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>     <!--create the second option and the link it goes to-->
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">     <!--set width with container-->
+    <div class="page-header">
+        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>     <!--set header of the content-->
+    </div>
+    {{ wtf.quick_form(form) }}
+</div>
+{% endblock %}
