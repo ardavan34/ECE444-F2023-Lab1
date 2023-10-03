@@ -1,0 +1,1 @@
+![Alt text](images_lab3/activity_2.png)
