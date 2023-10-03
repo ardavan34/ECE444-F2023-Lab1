@@ -32,7 +32,7 @@
     </div>
     {% endfor %}
     <div class="page-header">
-        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>     <!--set header of the content-->
+        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}! Welcome to Lab3 Docker!</h1>     <!--set header of the content-->
         {% if email and "utoronto" in email %}<h1>Your UofT email is {{ email }}</h1>
         {% elif email %}<h1>Please use your UofT email.</h1>
         {% endif %}     <!--set email address-->
